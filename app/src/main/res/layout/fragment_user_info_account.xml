@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ui.main.UserInfoAccountFragment">
+
+    <TextView
+        android:id="@+id/tvUserAccount"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/account"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/ivUserAccountImage"
+        android:layout_height="@dimen/_132sdp"
+        android:layout_width="@dimen/_132sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:background="@drawable/edittext_background"
+        app:layout_constraintTop_toBottomOf="@id/tvUserAccount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <LinearLayout
+        android:id="@+id/linContextUserName"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:layout_marginLeft="@dimen/_32sdp"
+        android:layout_marginRight="@dimen/_32sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivUserAccountImage"
+        >
+
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/onlyname"
+            android:textSize="@dimen/_16sdp"
+            android:layout_weight="0"
+            />
+
+        <TextView
+            android:id="@+id/tvUserNameInfo"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:textSize="@dimen/_16sdp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linContextUser"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_32sdp"
+        android:layout_marginRight="@dimen/_32sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linContextUserName"
+        >
+
+
+        <TextView
+            android:id="@+id/tvUserNameAcc"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/email_semicolon"
+            android:textSize="@dimen/_16sdp"
+            android:layout_weight="0"
+            />
+
+        <TextView
+            android:id="@+id/tvUserNameAccInfo"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:textSize="@dimen/_16sdp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linContextPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_32sdp"
+        android:layout_marginRight="@dimen/_32sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linContextUser"
+        >
+        <TextView
+            android:id="@+id/tvPhoneNumber"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/phone_number"
+            android:textSize="@dimen/_16sdp"
+            android:layout_weight="0"
+            />
+
+        <TextView
+            android:id="@+id/tvPhoneNumberInfo"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:textSize="@dimen/_16sdp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linContextScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_32sdp"
+        android:layout_marginRight="@dimen/_32sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linContextPhoneNumber"
+        >
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/score"
+            android:textSize="@dimen/_16sdp"
+            android:layout_weight="0"
+            />
+
+        <TextView
+            android:id="@+id/tvScoreInfo"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:textSize="@dimen/_16sdp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linContextNumOfPosts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_32sdp"
+        android:layout_marginRight="@dimen/_32sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linContextScore"
+        >
+        <TextView
+            android:id="@+id/tvNumOfPosts"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/number_of_posts"
+            android:textSize="@dimen/_16sdp"
+            android:layout_weight="0"
+            />
+
+        <TextView
+            android:id="@+id/tvNumOfPostsInfo"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:textSize="@dimen/_16sdp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linContextDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_32sdp"
+        android:layout_marginRight="@dimen/_32sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linContextNumOfPosts"
+        >
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/date_of_birth"
+            android:textSize="@dimen/_16sdp"
+            android:layout_weight="0"
+            />
+
+        <TextView
+            android:id="@+id/tvDateInfo"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:textSize="@dimen/_16sdp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+<android.widget.Button
+    android:id="@+id/bLogOut"
+    style="@style/yellowButton"
+    android:text="Log out"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/linContextDate"
+    />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="mosis.project.travelreport.ui.main.MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_MainFragment_to_AddLocationFragment"
+            app:destination="@id/AddLocationFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_UserRatingFragment"
+            app:destination="@id/UserRatingFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_LocationFragment"
+            app:destination="@id/LocationFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_AccountFragment"
+            app:destination="@id/AccountFragment" />
+        <action
+            android:id = "@+id/action_MainFragment_to_SearchFragment"
+            app:destination="@id/SearchFragment"/>
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/AddLocationFragment"
+        android:name="mosis.project.travelreport.ui.main.AddLocationFragment"
+        tools:layout="@layout/fragment_add_location">
+        <action
+            android:id="@+id/action_AddLocationFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/UserRatingFragment"
+        android:name="mosis.project.travelreport.ui.main.UserRatingFragment"
+        tools:layout="@layout/fragment_user_rating">
+        <action
+            android:id="@+id/action_UserRatingFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/LocationFragment"
+        android:name="mosis.project.travelreport.ui.main.LocationFragment"
+        tools:layout="@layout/fragment_location">
+        <action
+            android:id="@+id/action_LocationFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/AccountFragment"
+        android:name="mosis.project.travelreport.ui.main.UserInfoAccountFragment"
+        tools:layout="@layout/fragment_user_info_account">
+        <action
+            android:id="@+id/action_AccountFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SearchFragment"
+        android:name="mosis.project.travelreport.ui.main.SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_SearchFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+        <action
+            android:id="@+id/action_SearchFragment_to_LocationFragment"
+            app:destination="@id/LocationFragment" />
+
+    </fragment>
+
+
+</navigation>

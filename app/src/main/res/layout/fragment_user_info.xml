@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/svUserInfo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".ui.login.UserInfoFragment">
+
+        <TextView
+            android:id="@+id/tUserInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_28sdp"
+            android:text="@string/user_information"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_28sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivUserImage"
+            android:layout_width="@dimen/_132sdp"
+            android:layout_height="@dimen/_132sdp"
+            android:layout_margin="@dimen/_28sdp"
+            android:background="@drawable/edittext_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tUserInfo" />
+
+        <LinearLayout
+            android:id="@+id/linButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivUserImage">
+
+            <android.widget.Button
+                android:id="@+id/bAddImageCamera"
+                style="@style/yellowButton"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:text="@string/add_image_from_camera" />
+
+            <android.widget.Button
+                android:id="@+id/bAddImageFromGalery"
+                style="@style/yellowButton"
+                android:text="@string/add_image_from_gallery" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linUserInfoCompact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginRight="@dimen/_24sdp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linButtons">
+
+            <TextView
+                android:id="@+id/tUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_name_semicolon"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp" />
+
+            <EditText
+                android:id="@+id/etUserName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/user_name_acc"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/tName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/full_name"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp" />
+
+            <EditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/phone_number_normal"
+                android:inputType="phone"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <DatePicker
+            android:id="@+id/dpDateOfBirth"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_100sdp"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linUserInfoCompact" />
+
+
+        <android.widget.Button
+            android:id="@+id/bDone"
+            style="@style/yellowButton"
+            android:text="@string/done"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dpDateOfBirth"
+            app:layout_constraintVertical_bias="0.157" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

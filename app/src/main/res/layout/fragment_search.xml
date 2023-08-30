@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.main.SearchFragment">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/yellow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_by"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSearchBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:src="@drawable/search_48px"
+                app:tint="@color/black" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <LinearLayout
+            android:id="@+id/linContextButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <android.widget.Button
+                android:id="@+id/bNameSearch"
+                style="@style/yellowButton"
+                android:layout_width="@dimen/_148sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:text="@string/onlyname" />
+
+            <android.widget.Button
+                android:id="@+id/bUserSearch"
+                style="@style/yellowButton"
+                android:layout_width="@dimen/_148sdp"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:text="@string/user" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linContextButtonsUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linContextButtons">
+
+            <android.widget.Button
+                android:id="@+id/bTagSearch"
+                style="@style/yellowButton"
+                android:layout_width="@dimen/_148sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:text="@string/tag" />
+
+            <android.widget.Button
+                android:id="@+id/bDateSearch"
+                style="@style/yellowButton"
+                android:layout_width="@dimen/_148sdp"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:text="@string/date" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linContextButtonsLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linContextButtonsUser">
+
+            <android.widget.Button
+                android:id="@+id/bLocationSearch"
+                style="@style/yellowButton"
+                android:layout_width="@dimen/_148sdp"
+                android:text="@string/location" />
+        </LinearLayout>
+
+
+        <ViewFlipper
+            android:id="@+id/vf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linContextButtonsLocation">
+
+            <EditText
+                android:id="@+id/etSearchByName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:textColor="@color/black"
+                android:layout_marginRight="@dimen/_16sdp"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/search_by_name" />
+            <EditText
+                android:id="@+id/etSearchByUserName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:textColor="@color/black"
+                android:layout_marginRight="@dimen/_16sdp"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/search_by_user_name" />
+            <EditText
+                android:id="@+id/etSearchByTag"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:layout_marginRight="@dimen/_16sdp"
+                android:textColor="@color/black"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/search_by_tag" />
+            <EditText
+                android:id="@+id/etSearchByLocation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:layout_marginRight="@dimen/_16sdp"
+                android:textColor="@color/black"
+                android:inputType="number"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/search_by_location" />
+            <LinearLayout
+                android:id="@+id/linContextDate"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <android.widget.Button
+                    android:id="@+id/bDatePicker"
+                    style = "@style/yellowButton"
+                    android:layout_gravity="center"
+                    android:text="Add date"
+                    />
+
+                <TextView
+                    android:id = "@+id/tvStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16sdp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_background"
+                    />
+                <TextView
+                    android:id = "@+id/tvEndDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_16sdp"
+                    android:background="@drawable/edittext_background"
+                    />
+
+            </LinearLayout>
+            <android.widget.Button
+                android:id="@+id/bAllLocations"
+                style="@style/yellowButton"
+                android:layout_gravity="center"
+                android:text="@string/show_on_map"
+                />
+
+        </ViewFlipper>
+
+
+        <android.widget.Button
+            android:id="@+id/bSearch"
+            style="@style/yellowButton"
+            android:layout_width="@dimen/_148sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="Search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vf" />
+
+        <ListView
+            android:id="@+id/lvLocations"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bSearch"
+            tools:listitem="@layout/location_list_item" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
